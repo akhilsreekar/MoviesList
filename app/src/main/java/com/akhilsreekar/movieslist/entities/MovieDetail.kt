@@ -1,7 +1,5 @@
 package com.akhilsreekar.movieslist.entities
 
-import androidx.room.PrimaryKey
-import com.akhilsreekar.movieslist.Resource
 import com.akhilsreekar.movieslist.entities.credits.CreditResponse
 import com.akhilsreekar.movieslist.entities.review.ReviewResponse
 import com.akhilsreekar.movieslist.entities.similarmovies.SimilarMovieResponse

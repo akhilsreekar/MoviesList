@@ -6,15 +6,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.akhilsreekar.movieslist.DEFAULT_LANGUAGE
-import com.akhilsreekar.movieslist.Event
-import com.akhilsreekar.movieslist.Resource
+import com.akhilsreekar.movieslist.utils.DEFAULT_LANGUAGE
+import com.akhilsreekar.movieslist.utils.Event
 import com.akhilsreekar.movieslist.entities.MovieDetail
-import com.akhilsreekar.movieslist.entities.credits.CreditResponse
-import com.akhilsreekar.movieslist.entities.currentplaying.MovieResponse
-import com.akhilsreekar.movieslist.entities.review.ReviewResponse
-import com.akhilsreekar.movieslist.entities.similarmovies.SimilarMovieResponse
-import com.akhilsreekar.movieslist.entities.synopsis.SynopsisResponse
 import com.akhilsreekar.movieslist.repo.MovieRepository
 import kotlinx.coroutines.*
 import java.lang.Exception

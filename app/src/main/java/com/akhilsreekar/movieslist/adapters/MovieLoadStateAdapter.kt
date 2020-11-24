@@ -1,4 +1,4 @@
-package com.akhilsreekar.movieslist
+package com.akhilsreekar.movieslist.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

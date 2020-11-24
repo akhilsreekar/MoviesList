@@ -6,29 +6,24 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.compose.ui.text.input.textInputServiceFactory
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.akhilsreekar.movieslist.POSTER_BASE_URL
+import com.akhilsreekar.movieslist.utils.POSTER_BASE_URL
 import com.akhilsreekar.movieslist.R
-import com.akhilsreekar.movieslist.ReviewAdapter
-import com.akhilsreekar.movieslist.SimilarMovieAdapter
+import com.akhilsreekar.movieslist.adapters.ReviewAdapter
+import com.akhilsreekar.movieslist.adapters.SimilarMovieAdapter
 import com.akhilsreekar.movieslist.databinding.FragmentMovieDetailBinding
-import com.akhilsreekar.movieslist.databinding.FragmentMovieListBinding
 import com.akhilsreekar.movieslist.entities.MovieDetail
 import com.akhilsreekar.movieslist.viewmodels.MovieDetailViewModel
-import com.akhilsreekar.movieslist.viewmodels.MovieListViewModel
 import com.bumptech.glide.Glide
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.movie_item.view.*
 
 @AndroidEntryPoint
 class MovieDetailFragment : Fragment() {
 
     private val movieDetailViewModel: MovieDetailViewModel by viewModels()
     private lateinit var binding: FragmentMovieDetailBinding
-    private lateinit var reviewAdapter:ReviewAdapter
+    private lateinit var reviewAdapter: ReviewAdapter
     private lateinit var similarMovieAdapter: SimilarMovieAdapter
     override fun onCreateView(
         inflater: LayoutInflater,

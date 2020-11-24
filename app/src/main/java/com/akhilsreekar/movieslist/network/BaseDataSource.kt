@@ -1,4 +1,4 @@
-package com.akhilsreekar.movieslist
+package com.akhilsreekar.movieslist.network
 
 import retrofit2.Response
 

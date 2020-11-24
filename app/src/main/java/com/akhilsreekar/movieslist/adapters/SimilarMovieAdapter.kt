@@ -1,12 +1,13 @@
-package com.akhilsreekar.movieslist
+package com.akhilsreekar.movieslist.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.akhilsreekar.movieslist.R
 import com.akhilsreekar.movieslist.databinding.SimilarmovieItemBinding
 import com.akhilsreekar.movieslist.entities.similarmovies.SimilarMovie
+import com.akhilsreekar.movieslist.utils.POSTER_BASE_URL
 import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.similarmovie_item.view.*
 
 class SimilarMovieAdapter : RecyclerView.Adapter<SimilarMovieAdapter.SimilarMovieViewHolder>() {
 
@@ -31,7 +32,7 @@ class SimilarMovieAdapter : RecyclerView.Adapter<SimilarMovieAdapter.SimilarMovi
     class SimilarMovieViewHolder(private val itemBinding: SimilarmovieItemBinding) :
         RecyclerView.ViewHolder(itemBinding.root) {
         fun bind(similarMovie: SimilarMovie) {
-            val moviePosterUrl = POSTER_BASE_URL+similarMovie.posterPath
+            val moviePosterUrl = POSTER_BASE_URL +similarMovie.posterPath
             Glide.with(itemBinding.root)
                 .load(moviePosterUrl)
                 .placeholder(R.drawable.movie_icon)

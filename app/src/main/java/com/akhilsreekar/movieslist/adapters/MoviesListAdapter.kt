@@ -1,16 +1,20 @@
-package com.akhilsreekar.movieslist
+package com.akhilsreekar.movieslist.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.akhilsreekar.movieslist.R
 import com.akhilsreekar.movieslist.databinding.MovieItemBinding
 import com.akhilsreekar.movieslist.entities.currentplaying.Movie
+import com.akhilsreekar.movieslist.utils.POSTER_BASE_URL
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.movie_item.view.*
 
-class MoviesListAdapter(private val listener:BookClickListener) : PagingDataAdapter<Movie,MoviesListAdapter.MovieViewHolder>(MovieComparator) {
+class MoviesListAdapter(private val listener: BookClickListener) : PagingDataAdapter<Movie, MoviesListAdapter.MovieViewHolder>(
+    MovieComparator
+) {
 
     interface BookClickListener{
         fun onBookClicked(id:Int)
@@ -27,11 +31,11 @@ class MoviesListAdapter(private val listener:BookClickListener) : PagingDataAdap
 
     class MovieViewHolder(private val itemBinding: MovieItemBinding): RecyclerView.ViewHolder(itemBinding.root) {
 
-        fun bind(listener:BookClickListener,movie: Movie){
+        fun bind(listener: BookClickListener, movie: Movie){
             itemBinding.movieTitle.text = movie.title
             itemBinding.releaseDate.text = movie.releaseDate
 
-            val moviePosterUrl = POSTER_BASE_URL+movie.posterPath
+            val moviePosterUrl = POSTER_BASE_URL +movie.posterPath
             Glide.with(itemView.context)
                 .load(moviePosterUrl)
                 .placeholder(R.drawable.movie_icon)

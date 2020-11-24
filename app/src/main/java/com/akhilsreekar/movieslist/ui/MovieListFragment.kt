@@ -12,16 +12,13 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.akhilsreekar.movieslist.MovieLoadStateAdapter
-import com.akhilsreekar.movieslist.MoviesListAdapter
+import com.akhilsreekar.movieslist.adapters.MovieLoadStateAdapter
+import com.akhilsreekar.movieslist.adapters.MoviesListAdapter
 import com.akhilsreekar.movieslist.R
 import com.akhilsreekar.movieslist.databinding.FragmentMovieListBinding
 import com.akhilsreekar.movieslist.viewmodels.MovieListViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.collectLatest
-import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint

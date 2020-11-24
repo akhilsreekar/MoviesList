@@ -6,7 +6,7 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.cachedIn
-import com.akhilsreekar.movieslist.MovieDataSource
+import com.akhilsreekar.movieslist.network.MovieDataSource
 import com.akhilsreekar.movieslist.repo.MovieRepository
 
 class MovieListViewModel @ViewModelInject constructor(private val movieRepository: MovieRepository) :

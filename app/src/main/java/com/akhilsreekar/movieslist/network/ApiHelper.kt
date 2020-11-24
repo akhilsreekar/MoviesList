@@ -1,11 +1,10 @@
-package com.akhilsreekar.movieslist
+package com.akhilsreekar.movieslist.network
 
 import com.akhilsreekar.movieslist.entities.credits.CreditResponse
 import com.akhilsreekar.movieslist.entities.currentplaying.MovieResponse
 import com.akhilsreekar.movieslist.entities.review.ReviewResponse
 import com.akhilsreekar.movieslist.entities.similarmovies.SimilarMovieResponse
 import com.akhilsreekar.movieslist.entities.synopsis.SynopsisResponse
-import retrofit2.Response
 import javax.inject.Inject
 
 class ApiHelper @Inject constructor(val movieApiService: MovieApiService) : BaseDataSource() {

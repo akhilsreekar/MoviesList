@@ -1,4 +1,4 @@
-package com.akhilsreekar.movieslist
+package com.akhilsreekar.movieslist.network
 
 class Resource<out T>(val status: Status, val data: T?, val message: String?) {
 

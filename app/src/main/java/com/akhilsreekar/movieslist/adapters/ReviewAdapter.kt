@@ -1,17 +1,16 @@
-package com.akhilsreekar.movieslist
+package com.akhilsreekar.movieslist.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.akhilsreekar.movieslist.databinding.ReviewItemBinding
-import com.akhilsreekar.movieslist.databinding.SimilarmovieItemBinding
 import com.akhilsreekar.movieslist.entities.review.Review
 
 class ReviewAdapter : RecyclerView.Adapter<ReviewAdapter.ReviewViewHolder>() {
 
     private var reviewsList:List<Review> = ArrayList()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):ReviewViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ReviewViewHolder {
         val binding: ReviewItemBinding = ReviewItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ReviewViewHolder(binding)
     }

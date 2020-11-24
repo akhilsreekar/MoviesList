@@ -1,7 +1,6 @@
-package com.akhilsreekar.movieslist
+package com.akhilsreekar.movieslist.network
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.liveData
 import kotlinx.coroutines.Dispatchers
 
@@ -12,12 +11,9 @@ fun <T> performGetOperation(networkCall: suspend () -> Resource<T>): LiveData<Re
         val responseStatus = networkCall.invoke()
 
         if (responseStatus.status == Resource.Status.SUCCESS) {
-//            emitSource(MutableLiveData(responseStatus))
             emit(Resource.success(responseStatus.data!!))
         } else if(responseStatus.status == Resource.Status.ERROR){
             emit(Resource.error(responseStatus.message!!))
-//            emitSource(source)
         }
-
 
     }

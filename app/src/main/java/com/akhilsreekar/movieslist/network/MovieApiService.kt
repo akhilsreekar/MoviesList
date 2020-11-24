@@ -1,4 +1,4 @@
-package com.akhilsreekar.movieslist
+package com.akhilsreekar.movieslist.network
 
 import com.akhilsreekar.movieslist.entities.credits.CreditResponse
 import com.akhilsreekar.movieslist.entities.currentplaying.MovieResponse

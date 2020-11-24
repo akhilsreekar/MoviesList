@@ -1,5 +1,7 @@
-package com.akhilsreekar.movieslist
+package com.akhilsreekar.movieslist.network
 
+import com.akhilsreekar.movieslist.utils.API_KEY
+import com.akhilsreekar.movieslist.utils.BASE_URL
 import com.akhilsreekar.movieslist.repo.MovieRepository
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder

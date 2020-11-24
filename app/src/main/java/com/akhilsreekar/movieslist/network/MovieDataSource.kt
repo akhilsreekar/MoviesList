@@ -1,6 +1,7 @@
-package com.akhilsreekar.movieslist
+package com.akhilsreekar.movieslist.network
 
 import androidx.paging.PagingSource
+import com.akhilsreekar.movieslist.utils.DEFAULT_LANGUAGE
 import com.akhilsreekar.movieslist.entities.currentplaying.Movie
 import com.akhilsreekar.movieslist.repo.MovieRepository
 

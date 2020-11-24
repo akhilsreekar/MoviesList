@@ -1,6 +1,6 @@
 package com.akhilsreekar.movieslist.repo
 
-import com.akhilsreekar.movieslist.ApiHelper
+import com.akhilsreekar.movieslist.network.ApiHelper
 import javax.inject.Inject
 
 class MovieRepository @Inject constructor(val apiHelper: ApiHelper) {
