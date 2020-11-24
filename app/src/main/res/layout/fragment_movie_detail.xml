@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.MovieDetailFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/load_state_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:id="@+id/movie_poster"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_alignParentTop="true"
+            android:contentDescription="Movie Image"
+            android:scaleType="centerCrop" />
+
+
+        <LinearLayout
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/movie_poster"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/movie_name"
+                layout="@layout/movie_detail" />
+
+            <include
+                android:id="@+id/popoularity"
+                layout="@layout/movie_detail" />
+
+            <include
+                android:id="@+id/genres"
+                layout="@layout/movie_detail" />
+
+            <include
+                android:id="@+id/cast"
+                layout="@layout/movie_detail" />
+
+            <include
+                android:id="@+id/crew"
+                layout="@layout/movie_detail" />
+
+            <include
+                android:id="@+id/reviews"
+                layout="@layout/reviews_similarmovies_item"/>
+
+            <include
+                android:id="@+id/similar_movies"
+                layout="@layout/reviews_similarmovies_item"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/load_state_retry"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+            android:text="Retry" />
+
+    </RelativeLayout>
+</ScrollView>
