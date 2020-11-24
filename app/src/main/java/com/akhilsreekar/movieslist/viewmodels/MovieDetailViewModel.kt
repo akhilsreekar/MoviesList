@@ -46,31 +46,31 @@ class MovieDetailViewModel @ViewModelInject constructor(private val movieReposit
                                     _movieId.value!!
                                 )
                             }.await()
-//                        val reviewCallResult =
-//                            async {
-//                                movieRepository.getMovieReviews(
-//                                    DEFAULT_LANGUAGE,
-//                                    _movieId.value!!
-//                                )
-//                            }.await()
-//                        val creditsCallResult =
-//                            async {
-//                                movieRepository.getMovieCredits(
-//                                    DEFAULT_LANGUAGE,
-//                                    _movieId.value!!
-//                                )
-//                            }.await()
-//                        val similarMovieCallResult =
-//                            async {
-//                                movieRepository.getSimilarMovies(
-//                                    DEFAULT_LANGUAGE,
-//                                    _movieId.value!!
-//                                )
-//                            }.await()
+                        val reviewCallResult =
+                            async {
+                                movieRepository.getMovieReviews(
+                                    DEFAULT_LANGUAGE,
+                                    _movieId.value!!
+                                )
+                            }.await()
+                        val creditsCallResult =
+                            async {
+                                movieRepository.getMovieCredits(
+                                    DEFAULT_LANGUAGE,
+                                    _movieId.value!!
+                                )
+                            }.await()
+                        val similarMovieCallResult =
+                            async {
+                                movieRepository.getSimilarMovies(
+                                    DEFAULT_LANGUAGE,
+                                    _movieId.value!!
+                                )
+                            }.await()
 
 
 
-//                        movieDetailLiveData.postValue(MovieDetail(_movieId.value!!,synopsisCallResult,reviewCallResult,creditsCallResult,similarMovieCallResult))
+                        movieDetailLiveData.postValue(MovieDetail(_movieId.value!!,synopsisCallResult,reviewCallResult,creditsCallResult,similarMovieCallResult))
 
                     } catch (ex: Exception) {
                         movieDetailLiveData.postValue(null)

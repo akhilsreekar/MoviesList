@@ -68,7 +68,6 @@ class MovieDetailFragment : Fragment() {
     private fun setUpErrorView(){
         binding.loadStateProgress.visibility = View.GONE
         binding.loadStateRetry.visibility = View.VISIBLE
-
     }
 
     private fun fetchData(){
